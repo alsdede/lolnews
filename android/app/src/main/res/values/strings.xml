@@ -1,0 +1,6 @@
+<resources>
+  <string name="app_name">lolnews</string>
+  <string name="expo_splash_screen_resize_mode" translatable="false">cover</string>
+  <string name="expo_splash_screen_status_bar_translucent" translatable="false">false</string>
+  <string name="server_client_id">476167065766-ahc8qugetm0noh1rqggg8qac0r7i93eu.apps.googleusercontent.com</string>
+</resources>
