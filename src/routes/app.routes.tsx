@@ -62,7 +62,6 @@ const AppRoutes = () => {
         headerShown: false,
       }}
     >
-      <Stack.Screen name="SignIn" component={SignIn} />
       <Stack.Screen name="BottomTabs" component={BottomRoutes} />
     </Stack.Navigator>
   );

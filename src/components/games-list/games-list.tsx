@@ -1,10 +1,10 @@
-import React from 'react';
-import { FlatList } from 'react-native';
+import React from "react";
+import { FlatList } from "react-native";
 
-import GameItem from './game-item/game-item';
+import GameItem from "./game-item/game-item";
 
-import { GAMES } from '@/screens/details/content';
-import * as S from './games-list.styles';
+import { GAMES } from "@/screens/details/content";
+import * as S from "./games-list.styles";
 
 type Props = {
   onSelect: (value: string) => void;
@@ -13,9 +13,15 @@ type Props = {
 
 const GamesList = ({ onSelect, selected }: Props) => {
   return (
-    <FlatList
+    <S.List
       data={GAMES}
-      contentContainerStyle={{ marginTop: 16, paddingHorizontal: 8 }}
+      contentContainerStyle={{
+        marginTop: 16,
+        paddingHorizontal: 8,
+        paddingVertical: 8,
+        marginBottom: 16,
+        alignItems: "center",
+      }}
       keyExtractor={(item) => item.id}
       renderItem={({ item }) => (
         <GameItem

@@ -19,7 +19,6 @@ const SignIn = () => {
   return (
     <S.Wrapper>
       <S.Title>Login</S.Title>
-
       <GoogleSigninButton
         size={GoogleSigninButton.Size.Wide}
         color={GoogleSigninButton.Color.Dark}

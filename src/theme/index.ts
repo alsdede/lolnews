@@ -23,11 +23,11 @@ export default {
       body: 'Roboto_400Regular',
     },
     fontSizes: {
-      xs: 12,
-      sm: 14,
-      md: 16,
-      lg: 18,
-      xl: 20,
+      xs: "12px",
+      sm: "14px",
+      md: "16px",
+      lg: "18px",
+      xl: "20px",
     },
     sizes: {
       2: '2px',
@@ -41,4 +41,3 @@ export default {
       148: '148px',
     },
   };
-  

@@ -5,4 +5,7 @@ export const Wrapper = styled(SafeAreaView)`
   flex: 1;
   width: 100%;
   background-color: black;
+
 `;
+
+
