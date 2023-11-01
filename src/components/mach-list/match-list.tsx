@@ -2,7 +2,7 @@ import React from "react";
 import { FlatList, Image } from "react-native";
 
 import { GAMES } from "@/screens/details/content";
-import { Text } from "@/components/text/text";
+import Text from "@/components/text/text";
 import * as S from "./match-list.styles";
 
 type Props = {

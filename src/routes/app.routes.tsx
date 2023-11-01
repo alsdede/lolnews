@@ -7,12 +7,17 @@ import Details from "@/screens/details/details-screen";
 import Home from "@/screens/home/home-screen";
 import Schedule from "@/screens/schedule/schedule-screen";
 import SignIn from "@/screens/auth/signin";
+import { useEffect } from "react";
 
 const { Navigator, Screen } = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
 const BottomRoutes = () => {
   const { colors } = useTheme();
+
+  useEffect(()=> {
+    
+  },[])
   return (
     <Navigator
       screenOptions={{

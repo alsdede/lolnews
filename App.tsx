@@ -1,8 +1,7 @@
 import { useEffect } from "react";
 import * as WebBrowser from "expo-web-browser";
-import * as Google from "expo-auth-session/providers/google";
 import { StatusBar } from "expo-status-bar";
-import Constants from "expo-constants";
+
 import {
   useFonts,
   Roboto_400Regular,
@@ -14,7 +13,9 @@ import { ThemeProvider } from "styled-components/native";
 import Routes from "@/routes";
 import theme from "@/theme";
 import { handleNotificationClick } from "@/utils/notifications";
-import { ANDROID_CLIENT_ID, ONESIGNAL_ID } from "@env";
+import { ONESIGNAL_ID } from "@env";
+import { SheetProvider } from "react-native-actions-sheet";
+import "@/components/action-sheet/sheet.tsx";
 
 OneSignal.Debug.setLogLevel(LogLevel.Verbose);
 OneSignal.initialize(ONESIGNAL_ID);
@@ -32,8 +33,10 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <StatusBar backgroundColor="transparent" translucent />
-      {fontsLoaded && <Routes />}
+      <SheetProvider>
+        <StatusBar backgroundColor="transparent" translucent />
+        {fontsLoaded && <Routes />}
+      </SheetProvider>
     </ThemeProvider>
   );
 }

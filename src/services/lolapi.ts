@@ -20,6 +20,7 @@ export function getScheduleResponse() {
     })
 }
 
+
 export function getWindowResponse(gameId: string, date?: string) {
     return axios.get(`${API_URL_LIVE}/window/${gameId}`, {
         params: {
@@ -88,7 +89,31 @@ export function getEventDetailsResponse(gameId: string) {
     })
 }
 
-export function getStandingsResponse(tournamentId: string) {
+export function getLeagues() {
+  return axios.get(`${API_URL_PERSISTED}/getLeagues`, {
+      params: {
+          "hl": "en-US",
+      },
+      headers: {
+          "x-api-key": API_KEY,
+      },
+  })
+}
+export function getTournamentsForLeague(leagueId:string) {
+  return axios.get(`${API_URL_PERSISTED}/getTournamentsForLeague`, {
+      params: {
+          "hl": "en-US",
+          "leagueId": leagueId,
+
+      },
+      headers: {
+          "x-api-key": API_KEY,
+      },
+  })
+}
+
+
+export function getStandingsResponse(tournamentId:string) {
     return axios.get(`${API_URL_PERSISTED}/getStandings`, {
         params: {
             "hl": "en-US",
